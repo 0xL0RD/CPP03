@@ -6,7 +6,7 @@
 /*   By: rubsanch <rubsanch@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 06:42:09 by rubsanch          #+#    #+#             */
-/*   Updated: 2026/02/17 10:56:36 by rubsanch         ###   ########.fr       */
+/*   Updated: 2026/02/17 11:04:13 by rubsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -138,9 +138,10 @@ void	ClapTrap::beRepaired(unsigned int amount)
 	if (this->energy_points_get() > 0)
 	{
 		tmp = static_cast<unsigned long>(amount) + this->energy_points_get();
+		std::cout << std::endl << " tmp: " << tmp << std::endl ;
 		if (tmp > std::numeric_limits<unsigned int>::max())
-			tmp = std::numeric_limits<unsigned int>::max();
-		std::cout << " repaired by " << tmp 
+			amount = std::numeric_limits<unsigned int>::max();
+		std::cout << " repaired by " << amount 
 			<< " (vs " << amount << ") " << "points of health!";
 		this->_energy_points += tmp;
 	}
