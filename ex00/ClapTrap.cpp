@@ -6,7 +6,7 @@
 /*   By: rubsanch <rubsanch@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 06:42:09 by rubsanch          #+#    #+#             */
-/*   Updated: 2026/02/17 14:11:59 by rubsanch         ###   ########.fr       */
+/*   Updated: 2026/02/17 15:42:32 by rubsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,20 @@
 
 const std::string	ClapTrap::_class_name = __FILE__;
 
+ClapTrap::ClapTrap(void)
+	: _name("default"), _hit_points(10), _energy_points(10), _attack_damage(0)
+{
+	std::cout << this->class_name_get()
+	   	<< " default constructor for '" << this->name_get() << "'"
+		<< " called"
+		<< std::endl;
+	return ;
+}
 ClapTrap::ClapTrap(const std::string &name)
 	: _name(name), _hit_points(10), _energy_points(10), _attack_damage(0)
 {
 	std::cout << this->class_name_get()
-	   	<< " default constructor for '" << this->name_get() << "'"
+	   	<< " 'name' constructor for '" << this->name_get() << "'"
 		<< " called"
 		<< std::endl;
 	return ;
@@ -138,7 +147,6 @@ void	ClapTrap::beRepaired(unsigned int amount)
 	else if (this->energy_points_get() > 0)
 	{
 		tmp = static_cast<unsigned long>(amount) + this->hit_points_get();
-		std::cout << std::endl << " tmp: " << tmp << std::endl ;
 		if (tmp > std::numeric_limits<unsigned int>::max())
 		{
 			//amount = std::numeric_limits<unsigned int>::max();

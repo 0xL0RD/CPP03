@@ -6,7 +6,7 @@
 /*   By: rubsanch <rubsanch@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 06:42:09 by rubsanch          #+#    #+#             */
-/*   Updated: 2026/02/17 12:09:48 by rubsanch         ###   ########.fr       */
+/*   Updated: 2026/02/17 15:41:44 by rubsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,10 @@ int	main(void)
 	ct2.beRepaired(std::numeric_limits<unsigned int>::max());
 	ct2.takeDamage(std::numeric_limits<unsigned int>::max());
 	ct2.beRepaired(1);
+	std::cout << "----------------" << std::endl;
+	
+	ClapTrap	ct3;
+	ct3.beRepaired(1);
 	return (0);
 }
 
