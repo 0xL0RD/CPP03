@@ -6,7 +6,7 @@
 /*   By: rubsanch <rubsanch@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 06:42:09 by rubsanch          #+#    #+#             */
-/*   Updated: 2026/02/17 10:50:12 by rubsanch         ###   ########.fr       */
+/*   Updated: 2026/02/17 12:11:52 by rubsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ class ClapTrap
 		std::string					_name;
 		unsigned int				_hit_points;	//health
 		unsigned int				_energy_points;
-		unsigned int				_attack_damage;
+		unsigned int				_attack_damage; //TODO: add seter to be able to attack??
 };
 
 std::ostream&	operator<<(std::ostream &os, const ClapTrap &input);
