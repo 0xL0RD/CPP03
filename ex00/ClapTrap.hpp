@@ -6,7 +6,7 @@
 /*   By: rubsanch <rubsanch@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 06:42:09 by rubsanch          #+#    #+#             */
-/*   Updated: 2026/02/17 12:11:52 by rubsanch         ###   ########.fr       */
+/*   Updated: 2026/02/17 14:11:19 by rubsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class ClapTrap
 		void			attack(const std::string& target); //TODO: should be const, but subject states prototype
 		void			takeDamage(unsigned int amount);
 		void			beRepaired(unsigned int amount);
-		const std::string&	class_name_get(void) const;
+		static const std::string&	class_name_get(void);
 		const std::string&	name_get(void) const;
 		unsigned int	hit_points_get(void) const;
 		unsigned int	energy_points_get(void) const;

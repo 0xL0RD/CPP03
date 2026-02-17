@@ -6,7 +6,7 @@
 /*   By: rubsanch <rubsanch@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 06:42:09 by rubsanch          #+#    #+#             */
-/*   Updated: 2026/02/17 12:13:20 by rubsanch         ###   ########.fr       */
+/*   Updated: 2026/02/17 14:11:59 by rubsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,9 +55,9 @@ ClapTrap&	ClapTrap::operator=(const ClapTrap &other)
 	return (*this);
 }
 
-const std::string&	ClapTrap::class_name_get(void) const
+const std::string&	ClapTrap::class_name_get(void)
 {
-	return (this->_class_name);
+	return (ClapTrap::_class_name);
 }
 
 const std::string&	ClapTrap::name_get(void) const
