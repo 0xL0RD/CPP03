@@ -6,7 +6,7 @@
 /*   By: rubsanch <rubsanch@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 06:42:09 by rubsanch          #+#    #+#             */
-/*   Updated: 2026/02/17 19:05:19 by rubsanch         ###   ########.fr       */
+/*   Updated: 2026/02/17 19:10:54 by rubsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,9 @@ int	main(void)
 	ct.beRepaired(1);
 	std::cout << std::endl;
 	ct.takeDamage(10); // Already dead
+	std::cout << "----------------" << std::endl;
+	ct.highFivesGuys();
+	std::cout << std::endl;
 	std::cout << "----------------" << std::endl;
 	return (0);
 }

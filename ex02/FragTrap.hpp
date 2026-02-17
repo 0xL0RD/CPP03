@@ -6,7 +6,7 @@
 /*   By: rubsanch <rubsanch@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 17:57:21 by rubsanch          #+#    #+#             */
-/*   Updated: 2026/02/17 18:35:13 by rubsanch         ###   ########.fr       */
+/*   Updated: 2026/02/17 19:13:12 by rubsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ class FragTrap : public ClapTrap
 		FragTrap(const std::string &name);
 		FragTrap(const FragTrap &other);
 		~FragTrap(void);
-		static const 	std::string&	class_name_get(void);
-		void highFivesGuys(void);
+		static const std::string&	class_name_get(void);
+		void						highFivesGuys(void);
 	private:
 		static const std::string	_class_name;
 };
