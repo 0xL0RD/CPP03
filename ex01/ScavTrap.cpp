@@ -6,7 +6,7 @@
 /*   By: rubsanch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 14:56:16 by rubsanch          #+#    #+#             */
-/*   Updated: 2026/02/17 17:43:19 by rubsanch         ###   ########.fr       */
+/*   Updated: 2026/02/17 17:50:11 by rubsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ ScavTrap::ScavTrap(void)
 	   	<< " default constructor for '" << this->name_get() << "'"
 		<< " called"
 		<< std::endl;
-	this->_hit_points = 100;
-	this->_energy_points = 50;
-	this->_attack_damage = 20;
+	this->_hit_points = HIT_POINTS;
+	this->_energy_points = ENERGY_POINTS;
+	this->_attack_damage = ATTACK_DAMAGE;
 	this->_is_guarded = false;
 	return ;
 }
@@ -35,9 +35,9 @@ ScavTrap::ScavTrap(const std::string &name)
 	   	<< " 'name' constructor for '" << this->name_get() << "'"
 		<< " called"
 		<< std::endl;
-	this->_hit_points = 100;
-	this->_energy_points = 50;
-	this->_attack_damage = 20;
+	this->_hit_points = HIT_POINTS;
+	this->_energy_points = ENERGY_POINTS;
+	this->_attack_damage = ATTACK_DAMAGE;
 	this->_is_guarded = false;
 	return ;
 }
