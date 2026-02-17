@@ -6,7 +6,7 @@
 /*   By: rubsanch <rubsanch@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 06:42:09 by rubsanch          #+#    #+#             */
-/*   Updated: 2026/02/17 15:42:32 by rubsanch         ###   ########.fr       */
+/*   Updated: 2026/02/17 15:46:10 by rubsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -121,7 +121,6 @@ void	ClapTrap::takeDamage(unsigned int amount)
 		<< " taking damage: ";
 	if (this->hit_points_get() == 0)
 		std::cout << " failed (he is DEAD)";
-	//else (this->hit_points_get() > 0)
 	else if(this->hit_points_get() > 0)
 	{
 		std::cout << amount
@@ -149,14 +148,11 @@ void	ClapTrap::beRepaired(unsigned int amount)
 		tmp = static_cast<unsigned long>(amount) + this->hit_points_get();
 		if (tmp > std::numeric_limits<unsigned int>::max())
 		{
-			//amount = std::numeric_limits<unsigned int>::max();
 			tmp = std::numeric_limits<unsigned int>::max()
-				//- this->energy_points_get();
 				- this->hit_points_get();
 		}
 		else
 			tmp = amount;
-		//this->_energy_points += tmp;
 		this->_hit_points += tmp;
 		std::cout << " repaired by t:" << tmp
 			<< " (vs a:" << amount << ") " << "points of health!";
