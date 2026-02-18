@@ -6,7 +6,7 @@
 /*   By: rubsanch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 14:56:16 by rubsanch          #+#    #+#             */
-/*   Updated: 2026/02/17 19:07:31 by rubsanch         ###   ########.fr       */
+/*   Updated: 2026/02/18 09:04:29 by rubsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ ScavTrap::ScavTrap(void)
 	   	<< " default constructor for '" << this->name_get() << "'"
 		<< " called"
 		<< std::endl;
-	this->_hit_points = HIT_POINTS;
-	this->_energy_points = ENERGY_POINTS;
-	this->_attack_damage = ATTACK_DAMAGE;
-	this->_is_guarded = false;
+	this->_hit_points = ST_HIT_POINTS;
+	this->_energy_points = ST_ENERGY_POINTS;
+	this->_attack_damage = ST_ATTACK_DAMAGE;
+	this->_is_guarded = ST_IS_GUARDED;
 	return ;
 }
 
@@ -35,10 +35,10 @@ ScavTrap::ScavTrap(const std::string &name)
 	   	<< " 'name' constructor for '" << this->name_get() << "'"
 		<< " called"
 		<< std::endl;
-	this->_hit_points = HIT_POINTS;
-	this->_energy_points = ENERGY_POINTS;
-	this->_attack_damage = ATTACK_DAMAGE;
-	this->_is_guarded = false;
+	this->_hit_points = ST_HIT_POINTS;
+	this->_energy_points = ST_ENERGY_POINTS;
+	this->_attack_damage = ST_ATTACK_DAMAGE;
+	this->_is_guarded = ST_IS_GUARDED;
 	return ;
 }
 

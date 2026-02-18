@@ -6,7 +6,7 @@
 /*   By: rubsanch <rubsanch@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 12:31:57 by rubsanch          #+#    #+#             */
-/*   Updated: 2026/02/17 17:49:21 by rubsanch         ###   ########.fr       */
+/*   Updated: 2026/02/18 09:03:17 by rubsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 
 # include "ClapTrap.hpp"
 
-# define HIT_POINTS 100
-# define ENERGY_POINTS 50
-# define ATTACK_DAMAGE 20
-# define IS_GUARDED false
+# define ST_HIT_POINTS 100
+# define ST_ENERGY_POINTS 50
+# define ST_ATTACK_DAMAGE 20
+# define ST_IS_GUARDED false
 
 class ScavTrap : public ClapTrap
 {
