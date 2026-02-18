@@ -6,7 +6,7 @@
 /*   By: rubsanch <rubsanch@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 17:57:21 by rubsanch          #+#    #+#             */
-/*   Updated: 2026/02/17 19:13:12 by rubsanch         ###   ########.fr       */
+/*   Updated: 2026/02/18 08:55:42 by rubsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 
 # include "ClapTrap.hpp"
 
-# define HIT_POINTS 100
-# define ENERGY_POINTS 100
-# define ATTACK_DAMAGE 30
+# define FT_HIT_POINTS 100
+# define FT_ENERGY_POINTS 100
+# define FT_ATTACK_DAMAGE 30
 
 class FragTrap : public ClapTrap
 {
