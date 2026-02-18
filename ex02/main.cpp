@@ -6,7 +6,7 @@
 /*   By: rubsanch <rubsanch@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 06:42:09 by rubsanch          #+#    #+#             */
-/*   Updated: 2026/02/17 19:10:54 by rubsanch         ###   ########.fr       */
+/*   Updated: 2026/02/18 11:22:33 by rubsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,10 @@ int	main(void)
 	std::cout << std::endl;
 	std::cout << "----------------" << std::endl;
 	ct.highFivesGuys();
+	std::cout << std::endl;
+	std::cout << "----------------" << std::endl;
+	FragTrap copy(ct);
+	copy.highFivesGuys();
 	std::cout << std::endl;
 	std::cout << "----------------" << std::endl;
 	ct.takeDamage(101); // Dies

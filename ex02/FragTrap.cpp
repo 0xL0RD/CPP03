@@ -6,7 +6,7 @@
 /*   By: rubsanch <rubsanch@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 17:57:21 by rubsanch          #+#    #+#             */
-/*   Updated: 2026/02/18 08:56:16 by rubsanch         ###   ########.fr       */
+/*   Updated: 2026/02/18 11:21:04 by rubsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,16 @@ FragTrap::~FragTrap(void)
 const std::string&	FragTrap::class_name_get(void)
 {
 	return ((const std::string&) FragTrap::_class_name);
+}
+
+FragTrap&	FragTrap::operator=(const FragTrap &other)
+{
+	std::cout << this->class_name_get()
+	   	<< " copy operator for '" << this->name_get() << "'"
+		<< " called"
+		<< std::endl;
+	(ClapTrap&) *this = (ClapTrap&) other;
+	return (*this);
 }
 
 void FragTrap::highFivesGuys(void)
