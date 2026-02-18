@@ -6,7 +6,7 @@
 /*   By: rubsanch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 14:56:16 by rubsanch          #+#    #+#             */
-/*   Updated: 2026/02/18 09:04:29 by rubsanch         ###   ########.fr       */
+/*   Updated: 2026/02/18 10:38:04 by rubsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,13 +42,14 @@ ScavTrap::ScavTrap(const std::string &name)
 	return ;
 }
 
-ScavTrap::ScavTrap(const ScavTrap &other) : ClapTrap(other)
+//ScavTrap::ScavTrap(const ScavTrap &other) : ClapTrap(other)
+ScavTrap::ScavTrap(const ScavTrap &other)
 {
 	std::cout << this->class_name_get()
-	   	<< " copy constructor for '" << this->name_get() << "'"
+	   	<< " copy constructor (ST) for " << this->name_get() 
 		<< " called"
 		<< std::endl;
-	*this = other;	
+	*this = other;
 }
 
 ScavTrap::~ScavTrap(void)
@@ -109,3 +110,18 @@ const std::string&	ScavTrap::class_name_get(void)
 	return ((const std::string&) ScavTrap::_class_name);
 }
 
+ScavTrap&	ScavTrap::operator=(const ScavTrap &other)
+{
+	std::cout << this->class_name_get()
+	   	<< " copy operator for '" << this->name_get() << "'"
+		<< " called"
+		<< std::endl;
+	(ClapTrap&) *this = (ClapTrap&) other;
+	this->_is_guarded = (bool) other.is_guarded_get();
+	return (*this);
+}
+
+bool		ScavTrap::is_guarded_get(void) const
+{
+	return (this->_is_guarded);
+}

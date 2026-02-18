@@ -6,7 +6,7 @@
 /*   By: rubsanch <rubsanch@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 06:42:09 by rubsanch          #+#    #+#             */
-/*   Updated: 2026/02/17 19:07:55 by rubsanch         ###   ########.fr       */
+/*   Updated: 2026/02/18 10:37:36 by rubsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,14 @@ int	main(void)
 	std::cout << "----------------" << std::endl;
 	ct.guardGate();
 	std::cout << std::endl;
+	std::cout << "----------------" << std::endl;
+	ct.guardGate();
+	std::cout << std::endl;
+	std::cout << "Copy constructor: " << std::endl;
+	ScavTrap copy(ct);
+	std::cout << "is clone guarded?: "
+		<< copy.is_guarded_get()
+		<< std::endl;
 	std::cout << "----------------" << std::endl;
 	ct.takeDamage(101); // Dies
 	std::cout << std::endl;

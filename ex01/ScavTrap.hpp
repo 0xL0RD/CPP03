@@ -6,7 +6,7 @@
 /*   By: rubsanch <rubsanch@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 12:31:57 by rubsanch          #+#    #+#             */
-/*   Updated: 2026/02/18 09:03:17 by rubsanch         ###   ########.fr       */
+/*   Updated: 2026/02/18 10:29:41 by rubsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ class ScavTrap : public ClapTrap
 		void	attack(const std::string& target);
 		void	guardGate(void);
 		static const std::string&	class_name_get(void);
+		ScavTrap&	operator=(const ScavTrap &other);
+		bool		is_guarded_get(void) const;
 		
 	private:
 		static const std::string	_class_name;
