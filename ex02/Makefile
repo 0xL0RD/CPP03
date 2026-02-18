@@ -1,8 +1,9 @@
-NAME = FragTrab 
-SRCS = main.cpp			ClapTrap.cpp		ScavTrap.cpp			FragTrap.cpp
-BUILD = ./build/
-OBJS = $(addprefix $(BUILD), $(SRCS:%.cpp=%.o))
-CXX = c++
+NAME =		FragTrap
+SRCS =		main.cpp			ClapTrap.cpp			ScavTrap.cpp		\
+			FragTrap.cpp
+BUILD =		./build/
+OBJS =		$(addprefix $(BUILD), $(SRCS:%.cpp=%.o))
+CXX =		c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -MMD -MP -g3
 
 all: $(NAME)
