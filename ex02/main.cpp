@@ -6,7 +6,7 @@
 /*   By: rubsanch <rubsanch@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 06:42:09 by rubsanch          #+#    #+#             */
-/*   Updated: 2026/02/18 11:22:33 by rubsanch         ###   ########.fr       */
+/*   Updated: 2026/02/18 11:24:46 by rubsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	main(void)
 {
-	FragTrap ct("'FT_robot1'");
+	FragTrap ct("FT_robot1");
 	std::cout << std::endl;
 	ct.attack("another_guy");
 	std::cout << std::endl;

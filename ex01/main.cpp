@@ -6,7 +6,7 @@
 /*   By: rubsanch <rubsanch@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 06:42:09 by rubsanch          #+#    #+#             */
-/*   Updated: 2026/02/18 10:37:36 by rubsanch         ###   ########.fr       */
+/*   Updated: 2026/02/18 11:25:59 by rubsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	main(void)
 {
-	ScavTrap ct("'ST_robot1'");
+	ScavTrap ct("ST_robot1");
 	std::cout << std::endl;
 	ct.attack("another_guy");
 	std::cout << std::endl;
