@@ -6,7 +6,7 @@
 /*   By: rubsanch <rubsanch@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 12:31:57 by rubsanch          #+#    #+#             */
-/*   Updated: 2026/02/18 10:29:41 by rubsanch         ###   ########.fr       */
+/*   Updated: 2026/02/19 12:59:57 by rubsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,11 @@ class ScavTrap : public ClapTrap
 		ScavTrap&	operator=(const ScavTrap &other);
 		bool		is_guarded_get(void) const;
 		
-	private:
+	protected:
+		static const int	ft_default_hit_points;
+		static const int	ft_default_energy_points;
+		static const int	ft_default_attack_damage;
+		static const bool	ft_default_is_guarded;
 		static const std::string	_class_name;
 		bool	_is_guarded;
 };
