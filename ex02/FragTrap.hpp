@@ -6,7 +6,7 @@
 /*   By: rubsanch <rubsanch@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 17:57:21 by rubsanch          #+#    #+#             */
-/*   Updated: 2026/02/19 13:19:53 by rubsanch         ###   ########.fr       */
+/*   Updated: 2026/02/19 16:38:48 by rubsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,13 @@
 
 # include "ClapTrap.hpp"
 
-class FragTrap : virtual public ClapTrap
+class FragTrap : public ClapTrap
 {
 	public:
 		FragTrap(void);
 		FragTrap(const std::string &name);
 		FragTrap(const FragTrap &other);
-		virtual ~FragTrap(void);
+		~FragTrap(void);
 		FragTrap&	operator=(const FragTrap &other);
 		static const std::string&	class_name_get(void);
 		void						highFivesGuys(void);
