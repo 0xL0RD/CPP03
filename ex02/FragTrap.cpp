@@ -6,12 +6,13 @@
 /*   By: rubsanch <rubsanch@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 17:57:21 by rubsanch          #+#    #+#             */
-/*   Updated: 2026/02/18 11:21:04 by rubsanch         ###   ########.fr       */
+/*   Updated: 2026/02/19 12:20:27 by rubsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 
+const int			FragTrap::ft_default_attack_damage = 30;
 const std::string	FragTrap::_class_name = __FILE__;
 
 FragTrap::FragTrap(void)
@@ -23,7 +24,8 @@ FragTrap::FragTrap(void)
 		<< std::endl;
 	this->_hit_points = FT_HIT_POINTS;
 	this->_energy_points = FT_ENERGY_POINTS;
-	this->_attack_damage = FT_ATTACK_DAMAGE;
+	//this->_attack_damage = FT_ATTACK_DAMAGE;
+	this->_attack_damage = FragTrap::ft_default_attack_damage;
 	return ;
 }
 
