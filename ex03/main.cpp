@@ -6,7 +6,7 @@
 /*   By: rubsanch <rubsanch@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 06:42:09 by rubsanch          #+#    #+#             */
-/*   Updated: 2026/02/19 13:41:47 by rubsanch         ###   ########.fr       */
+/*   Updated: 2026/02/19 14:20:51 by rubsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,6 @@
 
 int	main(void)
 {
-//	std::cout << "Hit points (FragTrap 100): " << FT_HIT_POINTS << std::endl
-//		<< "Energy points (ScavTrap 50): " << ST_ENERGY_POINTS << std::endl
-//		<< "Attack damage (FragTrap 30): " << FT_ATTACK_DAMAGE << std::endl;
-//	std::cout << "----------------" << std::endl;
-
 	DiamondTrap ct("DT_robot1");
 	std::cout << (ClapTrap&) ct << std::endl;
 	std::cout << std::endl;

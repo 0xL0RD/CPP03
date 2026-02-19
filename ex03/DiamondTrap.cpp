@@ -6,7 +6,7 @@
 /*   By: rubsanch <rubsanch@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/18 09:10:12 by rubsanch          #+#    #+#             */
-/*   Updated: 2026/02/19 13:38:11 by rubsanch         ###   ########.fr       */
+/*   Updated: 2026/02/19 14:21:05 by rubsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,9 @@ const bool	DiamondTrap::dt_default_is_guarded
 
 DiamondTrap::DiamondTrap(void)
 	:	ClapTrap()
-		//ClapTrap::_hit_points(DiamondTrap::dt_default_hit_points)
 {
 	this->_name = ClapTrap::_name;
 	ClapTrap::_name += DT_NAME_SUFFIX;
-	//this->_attack_damage = FT_ATTACK_DAMAGE;
 	this->_hit_points = DiamondTrap::dt_default_hit_points;
 	this->_energy_points = DiamondTrap::dt_default_energy_points;
 	this->_attack_damage = DiamondTrap::dt_default_attack_damage;
@@ -51,10 +49,7 @@ DiamondTrap::DiamondTrap(const std::string &name)
 		<< "Energy points (ScavTrap 50): " << ScavTrap::st_default_energy_points	
 		<< std::endl << "Attack damage (FragTrap 30): "
 		<< FragTrap::ft_default_attack_damage << std::endl;
-		//<< "Attack damage (FragTrap 30): " << ft_default_attack_damage
 	std::cout << "----------------" << std::endl;
-	//this->_name = name;
-	//this->_attack_damage = FT_ATTACK_DAMAGE;
 	this->_hit_points = DiamondTrap::dt_default_hit_points;
 	this->_energy_points = DiamondTrap::dt_default_energy_points;
 	this->_attack_damage = DiamondTrap::dt_default_attack_damage;
