@@ -6,7 +6,7 @@
 /*   By: rubsanch <rubsanch@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 12:31:57 by rubsanch          #+#    #+#             */
-/*   Updated: 2026/02/19 13:18:13 by rubsanch         ###   ########.fr       */
+/*   Updated: 2026/02/19 17:16:06 by rubsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,13 @@
 
 # include "ClapTrap.hpp"
 
-class ScavTrap : virtual public ClapTrap
+class ScavTrap : public ClapTrap
 {
 	public:
 		ScavTrap(void);
 		ScavTrap(const std::string &name);
 		ScavTrap(const ScavTrap &other);
-		virtual ~ScavTrap(void);
+		~ScavTrap(void);
 		void	attack(const std::string& target);
 		void	guardGate(void);
 		static const std::string&	class_name_get(void);
