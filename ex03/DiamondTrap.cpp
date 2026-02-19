@@ -6,7 +6,7 @@
 /*   By: rubsanch <rubsanch@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/18 09:10:12 by rubsanch          #+#    #+#             */
-/*   Updated: 2026/02/19 14:21:05 by rubsanch         ###   ########.fr       */
+/*   Updated: 2026/02/19 15:24:56 by rubsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,18 @@ DiamondTrap::DiamondTrap(void)
 	   	<< " default constructor for '" << this->_name << "'"
 		<< " called" << std::endl
 	   	<< "My name is: '" << this->_name << "'" <<std::endl
+		<< "My ClapTrap name is: '" << ScavTrap::ClapTrap::_name << "'"
+		<< std::endl;
+}
+
+DiamondTrap::DiamondTrap(const DiamondTrap &other)
+{
+	std::cout << "DiamondTrap.hpp"
+	   	<< " COPY constructor for '" << this->_name << "'"
+		<< " called" << std::endl;
+	(*this) = other;
+	this->_name = other._name;
+	std::cout << "My name is: '" << this->_name << "'" <<std::endl
 		<< "My ClapTrap name is: '" << ScavTrap::ClapTrap::_name << "'"
 		<< std::endl;
 }
@@ -85,7 +97,16 @@ DiamondTrap&	DiamondTrap::operator=(const DiamondTrap &other)
 	return (*this);
 }
 
-void DiamondTrap::whoAmI(void)
+void	DiamondTrap::attack(const std::string& target)
+{
+	std::cout << "DiamondTrap.hpp"
+		<< "Diammong calling ScavTrap to "
+	   	<< "attack to '" << target << "'"
+		<< std::endl;
+	ScavTrap::attack(target);
+}
+
+void	DiamondTrap::whoAmI(void)
 {
 	std::cout << "DiamondTrap.hpp" << " WhoAmI?: " << std::endl
 	   	<< "My name is: '" << this->_name << "'" <<std::endl

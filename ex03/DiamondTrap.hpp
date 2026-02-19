@@ -6,7 +6,7 @@
 /*   By: rubsanch <rubsanch@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/18 09:10:12 by rubsanch          #+#    #+#             */
-/*   Updated: 2026/02/19 13:11:17 by rubsanch         ###   ########.fr       */
+/*   Updated: 2026/02/19 15:13:12 by rubsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,14 @@ class DiamondTrap : public FragTrap, public ScavTrap
 {
 	public:
 		DiamondTrap(void);
-		DiamondTrap(const std::string &name);
+		DiamondTrap(const DiamondTrap &other);
 		~DiamondTrap(void);
+		DiamondTrap(const std::string &name);
 
 		DiamondTrap&	operator=(const DiamondTrap &other);
-		void whoAmI(void);
+
+		void	whoAmI(void);
+		void	attack(const std::string& target);
 
 	protected:
 		static const int	dt_default_hit_points;
