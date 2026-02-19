@@ -6,7 +6,7 @@
 /*   By: rubsanch <rubsanch@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 06:42:09 by rubsanch          #+#    #+#             */
-/*   Updated: 2026/02/18 07:58:44 by rubsanch         ###   ########.fr       */
+/*   Updated: 2026/02/19 08:47:43 by rubsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class ClapTrap
 		ClapTrap(void);
 		ClapTrap(const std::string &name);
 		ClapTrap(const ClapTrap &other);
-		~ClapTrap(void);
+		virtual ~ClapTrap(void);
 		ClapTrap&			operator=(const ClapTrap &other);
 		void				attack(const std::string& target);
 		void				takeDamage(unsigned int amount);
@@ -33,9 +33,9 @@ class ClapTrap
 		unsigned int		attack_damage_get(void) const;
 
 		static const 	std::string&	class_name_get(void);
+		std::string		_name;
 		
 	protected:
-		std::string		_name;
 		unsigned int	_hit_points;	//health
 		unsigned int	_energy_points;
 		unsigned int	_attack_damage;

@@ -6,7 +6,7 @@
 /*   By: rubsanch <rubsanch@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 06:42:09 by rubsanch          #+#    #+#             */
-/*   Updated: 2026/02/17 17:42:47 by rubsanch         ###   ########.fr       */
+/*   Updated: 2026/02/18 17:20:56 by rubsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ ClapTrap::ClapTrap(const std::string &name)
 {
 	std::cout << this->class_name_get()
 	   	<< " 'name' constructor for '" << this->name_get() << "'"
+		<< " p: " << &this->_name
 		<< " called"
 		<< std::endl;
 	return ;

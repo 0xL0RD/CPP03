@@ -6,7 +6,7 @@
 /*   By: rubsanch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 14:56:16 by rubsanch          #+#    #+#             */
-/*   Updated: 2026/02/17 19:07:31 by rubsanch         ###   ########.fr       */
+/*   Updated: 2026/02/18 17:20:30 by rubsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,37 +18,41 @@ ScavTrap::ScavTrap(void)
 	: ClapTrap("defaultSCAVTRAJP")
 {
 	std::cout << this->class_name_get()
-	   	<< " default constructor for '" << this->name_get() << "'"
+	   	<< " default1 constructor for '" << this->name_get() << "'"
+		<< " p: " << &this->_name
 		<< " called"
 		<< std::endl;
-	this->_hit_points = HIT_POINTS;
-	this->_energy_points = ENERGY_POINTS;
-	this->_attack_damage = ATTACK_DAMAGE;
-	this->_is_guarded = false;
+	this->_hit_points = ST_HIT_POINTS;
+	this->_energy_points = ST_ENERGY_POINTS;
+	this->_attack_damage = ST_ATTACK_DAMAGE;
+	this->_is_guarded = ST_IS_GUARDED;
 	return ;
 }
 
 ScavTrap::ScavTrap(const std::string &name)
-	: ClapTrap(name)
+	: ClapTrap(name + "_st")
 {
 	std::cout << this->class_name_get()
 	   	<< " 'name' constructor for '" << this->name_get() << "'"
 		<< " called"
 		<< std::endl;
-	this->_hit_points = HIT_POINTS;
-	this->_energy_points = ENERGY_POINTS;
-	this->_attack_damage = ATTACK_DAMAGE;
-	this->_is_guarded = false;
+	this->_hit_points = ST_HIT_POINTS;
+	this->_energy_points = ST_ENERGY_POINTS;
+	this->_attack_damage = ST_ATTACK_DAMAGE;
+	this->_is_guarded = ST_IS_GUARDED;
+	std::cout << "ST ep: " << ScavTrap::ClapTrap::_energy_points; 
+	std::cout << std::endl;
 	return ;
 }
 
-ScavTrap::ScavTrap(const ScavTrap &other) : ClapTrap(other)
+//ScavTrap::ScavTrap(const ScavTrap &other) : ClapTrap(other)
+ScavTrap::ScavTrap(const ScavTrap &other)
 {
 	std::cout << this->class_name_get()
-	   	<< " copy constructor for '" << this->name_get() << "'"
+	   	<< " copy constructor (ST) for " << this->name_get() 
 		<< " called"
 		<< std::endl;
-	*this = other;	
+	*this = other;
 }
 
 ScavTrap::~ScavTrap(void)
@@ -109,3 +113,18 @@ const std::string&	ScavTrap::class_name_get(void)
 	return ((const std::string&) ScavTrap::_class_name);
 }
 
+ScavTrap&	ScavTrap::operator=(const ScavTrap &other)
+{
+	std::cout << this->class_name_get()
+	   	<< " copy operator for '" << this->name_get() << "'"
+		<< " called"
+		<< std::endl;
+	(ClapTrap&) *this = (ClapTrap&) other;
+	this->_is_guarded = (bool) other.is_guarded_get();
+	return (*this);
+}
+
+bool		ScavTrap::is_guarded_get(void) const
+{
+	return (this->_is_guarded);
+}

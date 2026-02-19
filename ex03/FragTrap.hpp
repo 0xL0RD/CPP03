@@ -6,7 +6,7 @@
 /*   By: rubsanch <rubsanch@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 17:57:21 by rubsanch          #+#    #+#             */
-/*   Updated: 2026/02/17 19:13:12 by rubsanch         ###   ########.fr       */
+/*   Updated: 2026/02/19 08:46:36 by rubsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,25 @@
 
 # include "ClapTrap.hpp"
 
-# define HIT_POINTS 100
-# define ENERGY_POINTS 100
-# define ATTACK_DAMAGE 30
+# define FT_HIT_POINTS 100
+# define FT_ENERGY_POINTS 100
+# define FT_ATTACK_DAMAGE 30
 
-class FragTrap : public ClapTrap
+class FragTrap : virtual public ClapTrap
 {
 	public:
 		FragTrap(void);
 		FragTrap(const std::string &name);
+		//FragTrap(std::string &name);
 		FragTrap(const FragTrap &other);
 		~FragTrap(void);
+		FragTrap&	operator=(const FragTrap &other);
 		static const std::string&	class_name_get(void);
 		void						highFivesGuys(void);
+		
+		//TODO: borrar
+		//void attack(const std::string& target);
+
 	private:
 		static const std::string	_class_name;
 };
