@@ -6,7 +6,7 @@
 /*   By: rubsanch <rubsanch@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/18 09:10:12 by rubsanch          #+#    #+#             */
-/*   Updated: 2026/02/19 15:13:12 by rubsanch         ###   ########.fr       */
+/*   Updated: 2026/02/19 16:22:12 by rubsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,8 @@ class DiamondTrap : public FragTrap, public ScavTrap
 		static const int	dt_default_energy_points;
 		static const int	dt_default_attack_damage;
 		static const bool	dt_default_is_guarded;
+	
+	private:
 		std::string		_name;
 };
 
