@@ -6,7 +6,7 @@
 /*   By: rubsanch <rubsanch@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 06:42:09 by rubsanch          #+#    #+#             */
-/*   Updated: 2026/02/19 13:27:33 by rubsanch         ###   ########.fr       */
+/*   Updated: 2026/02/19 13:41:47 by rubsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ int	main(void)
 	std::cout << "----------------" << std::endl;
 	ct.beRepaired(1);
 	ct.guardGate();
+	ct.highFivesGuys();
 	std::cout << "----------------" << std::endl;
 	std::cout << "Copy whoAmI: " << std::endl;
 	DiamondTrap copy(ct);
