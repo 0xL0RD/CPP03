@@ -6,7 +6,7 @@
 /*   By: rubsanch <rubsanch@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 06:42:09 by rubsanch          #+#    #+#             */
-/*   Updated: 2026/02/18 11:25:59 by rubsanch         ###   ########.fr       */
+/*   Updated: 2026/02/19 16:33:50 by rubsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,10 @@ int	main(void)
 	std::cout << std::endl;
 	ct.attack("another_guy");
 	std::cout << std::endl;
+	{
+		ClapTrap old("ClabTrab_robot");
+		old.attack("other_guy");
+	}
 	ct.beRepaired(1);
 	std::cout << std::endl;
 	std::cout << "----------------" << std::endl;
