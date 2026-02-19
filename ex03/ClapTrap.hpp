@@ -6,7 +6,7 @@
 /*   By: rubsanch <rubsanch@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 06:42:09 by rubsanch          #+#    #+#             */
-/*   Updated: 2026/02/19 08:47:43 by rubsanch         ###   ########.fr       */
+/*   Updated: 2026/02/19 16:20:14 by rubsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,10 @@ class ClapTrap
 		unsigned int		energy_points_get(void) const;
 		unsigned int		attack_damage_get(void) const;
 
-		static const 	std::string&	class_name_get(void);
-		std::string		_name;
+		static const std::string&	class_name_get(void);
 		
 	protected:
+		std::string		_name;
 		unsigned int	_hit_points;	//health
 		unsigned int	_energy_points;
 		unsigned int	_attack_damage;
