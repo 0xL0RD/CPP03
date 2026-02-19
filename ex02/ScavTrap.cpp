@@ -6,7 +6,7 @@
 /*   By: rubsanch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 14:56:16 by rubsanch          #+#    #+#             */
-/*   Updated: 2026/02/17 19:09:23 by rubsanch         ###   ########.fr       */
+/*   Updated: 2026/02/19 11:52:43 by rubsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,7 @@ void	ScavTrap::guardGate(void)
 {
 	std::cout << this->class_name_get()
 	   	<< " " << this->name_get()
-		<< " setting guardGaate:";
+		<< " setting guardGate:";
 	if (this->hit_points_get() == 0)
 		std::cout << " failed (he is DEAD)";
 	else if (this->energy_points_get() == 0)
