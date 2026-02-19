@@ -6,12 +6,14 @@
 /*   By: rubsanch <rubsanch@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 17:57:21 by rubsanch          #+#    #+#             */
-/*   Updated: 2026/02/19 12:20:27 by rubsanch         ###   ########.fr       */
+/*   Updated: 2026/02/19 12:30:29 by rubsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 
+const int			FragTrap::ft_default_hit_points = 100;
+const int			FragTrap::ft_default_energy_points = 100;
 const int			FragTrap::ft_default_attack_damage = 30;
 const std::string	FragTrap::_class_name = __FILE__;
 
@@ -22,9 +24,11 @@ FragTrap::FragTrap(void)
 	   	<< " default constructor for '" << this->name_get() << "'"
 		<< " called"
 		<< std::endl;
-	this->_hit_points = FT_HIT_POINTS;
-	this->_energy_points = FT_ENERGY_POINTS;
+	//this->_hit_points = FT_HIT_POINTS;
+	//this->_energy_points = FT_ENERGY_POINTS;
 	//this->_attack_damage = FT_ATTACK_DAMAGE;
+	this->_hit_points = FragTrap::ft_default_hit_points;
+	this->_energy_points = FragTrap::ft_default_energy_points;
 	this->_attack_damage = FragTrap::ft_default_attack_damage;
 	return ;
 }
@@ -36,9 +40,12 @@ FragTrap::FragTrap(const std::string &name)
 	   	<< " 'name' constructor for '" << this->name_get() << "'"
 		<< " called"
 		<< std::endl;
-	this->_hit_points = FT_HIT_POINTS;
-	this->_energy_points = FT_ENERGY_POINTS;
-	this->_attack_damage = FT_ATTACK_DAMAGE;
+	//this->_hit_points = FT_HIT_POINTS;
+	//this->_energy_points = FT_ENERGY_POINTS;
+	//this->_attack_damage = FT_ATTACK_DAMAGE;
+	this->_hit_points = FragTrap::ft_default_hit_points;
+	this->_energy_points = FragTrap::ft_default_energy_points;
+	this->_attack_damage = FragTrap::ft_default_attack_damage;
 	return ;
 }
 
