@@ -6,16 +6,16 @@
 /*   By: rubsanch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 14:56:16 by rubsanch          #+#    #+#             */
-/*   Updated: 2026/02/19 13:00:24 by rubsanch         ###   ########.fr       */
+/*   Updated: 2026/02/19 13:18:47 by rubsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
-const int	ScavTrap::ft_default_hit_points = 100;
-const int	ScavTrap::ft_default_energy_points = 50;
-const int	ScavTrap::ft_default_attack_damage = 20;
-const bool	ScavTrap::ft_default_is_guarded = false;
+const int	ScavTrap::st_default_hit_points = 100;
+const int	ScavTrap::st_default_energy_points = 50;
+const int	ScavTrap::st_default_attack_damage = 20;
+const bool	ScavTrap::st_default_is_guarded = false;
 const std::string	ScavTrap::_class_name = __FILE__;
 
 ScavTrap::ScavTrap(void)
@@ -29,10 +29,10 @@ ScavTrap::ScavTrap(void)
 	//this->_energy_points = ST_ENERGY_POINTS;
 	//this->_attack_damage = ST_ATTACK_DAMAGE;
 	//this->_is_guarded = ST_IS_GUARDED;
-	this->_hit_points = ScavTrap::ft_default_hit_points;
-	this->_energy_points = ScavTrap::ft_default_energy_points;
-	this->_attack_damage = ScavTrap::ft_default_attack_damage;
-	this->_is_guarded = ScavTrap::ft_default_is_guarded;
+	this->_hit_points = ScavTrap::st_default_hit_points;
+	this->_energy_points = ScavTrap::st_default_energy_points;
+	this->_attack_damage = ScavTrap::st_default_attack_damage;
+	this->_is_guarded = ScavTrap::st_default_is_guarded;
 	return ;
 }
 
@@ -46,11 +46,11 @@ ScavTrap::ScavTrap(const std::string &name)
 	//this->_hit_points = ST_HIT_POINTS;
 	//this->_energy_points = ST_ENERGY_POINTS;
 	//this->_attack_damage = ST_ATTACK_DAMAGE;
-	this->_is_guarded = ST_IS_GUARDED;
-	this->_hit_points = ScavTrap::ft_default_hit_points;
-	this->_energy_points = ScavTrap::ft_default_energy_points;
-	this->_attack_damage = ScavTrap::ft_default_attack_damage;
-	this->_is_guarded = ScavTrap::ft_default_is_guarded;
+	//this->_is_guarded = ST_IS_GUARDED;
+	this->_hit_points = ScavTrap::st_default_hit_points;
+	this->_energy_points = ScavTrap::st_default_energy_points;
+	this->_attack_damage = ScavTrap::st_default_attack_damage;
+	this->_is_guarded = ScavTrap::st_default_is_guarded;
 	return ;
 }
 

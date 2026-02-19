@@ -6,7 +6,7 @@
 /*   By: rubsanch <rubsanch@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 12:31:57 by rubsanch          #+#    #+#             */
-/*   Updated: 2026/02/19 12:59:57 by rubsanch         ###   ########.fr       */
+/*   Updated: 2026/02/19 13:18:13 by rubsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,13 @@
 
 # include "ClapTrap.hpp"
 
-# define ST_HIT_POINTS 100
-# define ST_ENERGY_POINTS 50
-# define ST_ATTACK_DAMAGE 20
-# define ST_IS_GUARDED false
-
-class ScavTrap : public ClapTrap
+class ScavTrap : virtual public ClapTrap
 {
 	public:
 		ScavTrap(void);
 		ScavTrap(const std::string &name);
 		ScavTrap(const ScavTrap &other);
-		~ScavTrap(void);
+		virtual ~ScavTrap(void);
 		void	attack(const std::string& target);
 		void	guardGate(void);
 		static const std::string&	class_name_get(void);
@@ -34,10 +29,10 @@ class ScavTrap : public ClapTrap
 		bool		is_guarded_get(void) const;
 		
 	protected:
-		static const int	ft_default_hit_points;
-		static const int	ft_default_energy_points;
-		static const int	ft_default_attack_damage;
-		static const bool	ft_default_is_guarded;
+		static const int	st_default_hit_points;
+		static const int	st_default_energy_points;
+		static const int	st_default_attack_damage;
+		static const bool	st_default_is_guarded;
 		static const std::string	_class_name;
 		bool	_is_guarded;
 };
